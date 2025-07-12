@@ -1,0 +1,28 @@
+{
+	"name": "AZSQLDBLS",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"parameters": {
+			"sqlServerName": {
+				"type": "string"
+			},
+			"db_name": {
+				"type": "string"
+			},
+			"user_name": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "@{linkedService().sqlServerName}.database.windows.net\n",
+			"database": "@{linkedService().db_name}",
+			"encrypt": "mandatory",
+			"trustServerCertificate": true,
+			"authenticationType": "SQL",
+			"userName": "@{linkedService().user_name}",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDc2QUFFRUQxLTY3OUEtNDFFMy1CQjU2LTQ2OEI3RTk5NDRDOF9mYTE1ODY2Yy01OTVkLTQ4NmItOTI4ZC04MjViYzViMWY3NjciDQp9"
+		}
+	}
+}

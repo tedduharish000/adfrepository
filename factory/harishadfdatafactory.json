@@ -1,0 +1,9 @@
+{
+	"name": "harishadfdatafactory",
+	"location": "uaenorth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "a09f44af-9f01-40cf-81ef-462a3b128c18",
+		"tenantId": "3399e0b1-6537-4820-8278-6a4a3194dcb8"
+	}
+}

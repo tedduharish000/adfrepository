@@ -1,0 +1,54 @@
+{
+	"name": "azsqldbDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AZSQLDBLS",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"sqlServerName": {
+					"value": "@dataset().sqlServerName",
+					"type": "Expression"
+				},
+				"db_name": {
+					"value": "@dataset().db_name",
+					"type": "Expression"
+				},
+				"user_name": {
+					"value": "@dataset().user_name",
+					"type": "Expression"
+				}
+			}
+		},
+		"parameters": {
+			"tablename": {
+				"type": "string"
+			},
+			"schema": {
+				"type": "String"
+			},
+			"sqlServerName": {
+				"type": "string"
+			},
+			"db_name": {
+				"type": "string"
+			},
+			"user_name": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": {
+				"value": "@dataset().schema",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().tablename",
+				"type": "Expression"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,51 @@
+{
+	"name": "configjsonDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "config.json",
+				"fileSystem": "configs"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"db_name": {
+					"type": "string"
+				},
+				"container": {
+					"type": "string"
+				},
+				"directory": {
+					"type": "string"
+				},
+				"filename": {
+					"type": "string"
+				},
+				"storageaccountname": {
+					"type": "string"
+				},
+				"tablename": {
+					"type": "string"
+				},
+				"schema": {
+					"type": "string"
+				},
+				"user_name": {
+					"type": "string"
+				},
+				"sqlServerName": {
+					"type": "string"
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
