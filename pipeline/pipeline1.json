@@ -40,7 +40,7 @@
 										"type": "AzureBlobFSReadSettings",
 										"recursive": true,
 										"wildcardFileName": {
-											"value": "@item().name",
+											"value": "@concat(item().name, '.csv')",
 											"type": "Expression"
 										},
 										"enablePartitionDiscovery": false
