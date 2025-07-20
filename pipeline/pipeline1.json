@@ -28,7 +28,7 @@
 							"userProperties": [],
 							"typeProperties": {
 								"expression": {
-									"value": "@endswith(item(), '.csv' )",
+									"value": "@endswith(string(item()), '.csv' )",
 									"type": "Expression"
 								},
 								"ifTrueActivities": [
